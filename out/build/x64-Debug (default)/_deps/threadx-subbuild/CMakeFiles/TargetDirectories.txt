@@ -1,0 +1,3 @@
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/CMakeFiles/threadx-populate.dir
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/CMakeFiles/rebuild_cache.dir

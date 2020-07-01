@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-subbuild/CMakeFiles/netxduo-populate"
+		},
+		{
+			"file" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-subbuild/CMakeFiles/netxduo-populate.rule"
+		},
+		{
+			"file" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-subbuild/CMakeFiles/netxduo-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-subbuild/netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-subbuild/netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-subbuild/netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-subbuild/netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-update.rule"
+		},
+		{
+			"file" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-subbuild/netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-subbuild/netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-subbuild/netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-subbuild/netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"netxduo-populate"
+		],
+		"name" : "netxduo-populate"
+	}
+}

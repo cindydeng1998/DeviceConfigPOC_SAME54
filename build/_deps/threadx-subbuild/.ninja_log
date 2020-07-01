@@ -1,0 +1,11 @@
+# ninja log v5
+1	355	6131095964673925	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-mkdir	1e2eb5cc734ef9c1
+356	456	6131095965683655	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-download	2ddb050177a37f42
+459	568	6131095966793658	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-patch	8c8844ea27f4f2bc
+456	2733	0	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-update	4b8a7325493dff22
+2733	2814	6131095989251909	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-configure	e89b3d606f4b8693
+2814	2895	6131095990071891	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-build	7252c116bad999f9
+2895	2973	6131095990852085	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-install	43e559e8505dbe7f
+2973	3066	6131095991782142	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-test	181bc50697a93315
+3066	3201	6131095993132141	CMakeFiles/threadx-populate-complete	1f483ebe03931b63
+3066	3201	6131095993132141	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-done	1f483ebe03931b63

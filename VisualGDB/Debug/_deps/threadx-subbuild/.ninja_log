@@ -1,0 +1,25 @@
+# ninja log v5
+2	590	615270720	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-mkdir	2de24b52728cd97e
+591	4792	615270724	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-download	974eaf3e82cb2825
+4792	4968	615270725	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-patch	7a4dc8c2958acfd0
+4799	7999	0	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-update	e655662d11320ffc
+7999	8134	615270728	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-configure	f40d910c1a610bcd
+8135	8257	615270728	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-build	a0139673ef64899e
+8257	8407	615270728	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-install	f9a92b43bdc51a13
+8407	8552	615270728	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-test	13a76785a3b87da9
+8552	8769	615270728	CMakeFiles/threadx-populate-complete	b9892a98f16e4802
+8552	8769	615270728	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-done	b9892a98f16e4802
+1	6197	0	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-update	e655662d11320ffc
+6197	6444	615273533	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-configure	f40d910c1a610bcd
+6445	6712	615273534	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-build	a0139673ef64899e
+6712	6962	615273534	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-install	f9a92b43bdc51a13
+6963	7221	615273534	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-test	13a76785a3b87da9
+7222	7628	615273534	CMakeFiles/threadx-populate-complete	b9892a98f16e4802
+7222	7628	615273534	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-done	b9892a98f16e4802
+1	2497	0	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-update	e655662d11320ffc
+2497	2605	615319161	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-configure	f40d910c1a610bcd
+2605	2813	615319161	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-build	a0139673ef64899e
+2813	3045	615319162	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-install	f9a92b43bdc51a13
+3045	3228	615319162	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-test	13a76785a3b87da9
+3228	3603	615319162	CMakeFiles/threadx-populate-complete	b9892a98f16e4802
+3228	3603	615319162	threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-done	b9892a98f16e4802

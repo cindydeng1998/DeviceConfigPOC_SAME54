@@ -1,0 +1,14 @@
+# Target labels
+ threadx-populate
+# Source files and their labels
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/CMakeFiles/threadx-populate
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/CMakeFiles/threadx-populate.rule
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/CMakeFiles/threadx-populate-complete.rule
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-install.rule
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-mkdir.rule
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-download.rule
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-update.rule
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-patch.rule
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-configure.rule
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-build.rule
+C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-subbuild/threadx-populate-prefix/src/threadx-populate-stamp/threadx-populate-test.rule

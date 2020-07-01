@@ -1,0 +1,993 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "app/atsame54_azure_iot.elf"
+		},
+		{
+			"path" : "app/atsame54_azure_iot.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_options",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"app/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 16,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 26,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 18,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1  "
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "NX_INCLUDE_USER_DEFINE_FILE"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "TX_INCLUDE_USER_DEFINE_FILE"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "__SAME54P20A__"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-src/ports/cortex_m4/gnu/inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-src/common/inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-build/custom_inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/ports/cortex_m4/gnu/inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/common/inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/auto_ip"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/BSD"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/dhcp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/dns"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/ftp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/http"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/mdns"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/mqtt"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/nat"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/pop3"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/ppp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/pppoe"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/smtp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/snmp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/sntp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/telnet"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/tftp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/web"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/crypto_libraries/inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/nx_secure/inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/nx_secure/ports"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-build/custom_inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/netx_driver/src"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/config"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/CMSIS/Core/Include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/ethernet_phy"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hal/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hal/utils/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/cmcc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/core"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/dmac"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/gclk"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/gmac"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/mclk"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/osc32kctrl"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/oscctrl"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/pm"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/port"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/ramecc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/sercom"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hri"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/stdio_redirect"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/temperature_sensor"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/temperature_sensor/BME280_WeatherClick"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/common/."
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " "
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "NX_INCLUDE_USER_DEFINE_FILE"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "TX_INCLUDE_USER_DEFINE_FILE"
+				},
+				{
+					"backtrace" : 3,
+					"define" : "__SAME54P20A__"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-src/ports/cortex_m4/gnu/inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-src/common/inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/threadx-build/custom_inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/ports/cortex_m4/gnu/inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/common/inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/auto_ip"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/BSD"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/dhcp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/dns"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/ftp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/http"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/mdns"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/mqtt"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/nat"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/pop3"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/ppp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/pppoe"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/smtp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/snmp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/sntp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/telnet"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/tftp"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/addons/web"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/crypto_libraries/inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/nx_secure/inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-src/nx_secure/ports"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/out/build/x64-Debug (default)/_deps/netxduo-build/custom_inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/netx_driver/src"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/config"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/CMSIS/Core/Include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/ethernet_phy"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hal/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hal/utils/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/cmcc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/core"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/dmac"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/gclk"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/gmac"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/mclk"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/osc32kctrl"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/oscctrl"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/pm"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/port"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/ramecc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hpl/sercom"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/hri"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/stdio_redirect"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/temperature_sensor"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start/src/temperature_sensor/BME280_WeatherClick"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/common/."
+				}
+			],
+			"language" : "ASM",
+			"sourceIndexes" : 
+			[
+				2
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "app_common::@bfc844598bd03e848b3c"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "threadx::@45f210d4a0d1456e0184"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "netxduo::@06a57890f3bd04ee268a"
+		},
+		{
+			"id" : "netxdriver::@13a437f4768876dd88d5"
+		},
+		{
+			"id" : "atmel_start::@f57cb90c060af79cf563"
+		}
+	],
+	"id" : "atsame54_azure_iot::@5f5a17c01335469806cb",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "\"-TC:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/app/startup/same54p20a_flash.ld\"",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-Wl,-Map=atsame54_azure_iot.map",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "..\\_deps\\threadx-build\\threadx.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "..\\_deps\\netxduo-build\\netxduo.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "..\\_deps\\netxduo-build\\netxduo.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "..\\_deps\\threadx-build\\threadx.lib",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "atsame54_azure_iot",
+	"nameOnDisk" : "atsame54_azure_iot.elf",
+	"paths" : 
+	{
+		"build" : "app",
+		"source" : "app"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				3,
+				4,
+				5
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				2
+			]
+		},
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "app/startup/startup_same54.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "app/startup/system_same54.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "app/startup/tx_initialize_low_level.S",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "app/azure_iothub.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "app/board_init.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "app/main.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/netx_driver/CMakeFiles/netxdriver.dir/src/nx_driver_same54.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/netx_driver/CMakeFiles/netxdriver.dir/src/nx_driver_same54_low_level.s.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/atmel_start.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/driver_init.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/ethernet_phy/ethernet_phy.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/ethernet_phy_main.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hal/src/hal_atomic.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hal/src/hal_cache.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hal/src/hal_delay.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hal/src/hal_gpio.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hal/src/hal_i2c_m_sync.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hal/src/hal_init.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hal/src/hal_io.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hal/src/hal_mac_async.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hal/src/hal_sleep.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hal/src/hal_usart_sync.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hal/utils/src/utils_assert.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hal/utils/src/utils_event.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hal/utils/src/utils_list.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hpl/cmcc/hpl_cmcc.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hpl/core/hpl_core_m4.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hpl/core/hpl_init.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hpl/dmac/hpl_dmac.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hpl/gclk/hpl_gclk.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hpl/gmac/hpl_gmac.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hpl/mclk/hpl_mclk.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hpl/osc32kctrl/hpl_osc32kctrl.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hpl/oscctrl/hpl_oscctrl.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hpl/pm/hpl_pm.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hpl/ramecc/hpl_ramecc.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/hpl/sercom/hpl_sercom.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/stdio_redirect/read.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/stdio_redirect/write.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/stdio_redirect/stdio_io.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/stdio_start.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/temperature_sensor/BME280_WeatherClick/Bosch_BME280.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/lib/atmel_start/CMakeFiles/atmel_start.dir/src/temperature_sensor/temperature_sensor.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/common/CMakeFiles/app_common.dir/azure/azure_mqtt.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/common/CMakeFiles/app_common.dir/azure/cert.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/common/CMakeFiles/app_common.dir/azure/sha256.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/common/CMakeFiles/app_common.dir/azure/hmac_sha256.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/common/CMakeFiles/app_common.dir/azure/sas_token.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/common/CMakeFiles/app_common.dir/networking.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/common/CMakeFiles/app_common.dir/sntp_client.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "out/build/x64-Debug (default)/common/CMakeFiles/app_common.dir/newlib_nano.c.obj",
+			"sourceGroupIndex" : 2
+		}
+	],
+	"type" : "EXECUTABLE"
+}

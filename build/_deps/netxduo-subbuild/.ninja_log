@@ -1,0 +1,11 @@
+# ninja log v5
+0	434	6131096003562553	netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-mkdir	11b67b8448c802ff
+434	559	6131096004812542	netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-download	f82f6ad91cbbf8ac
+563	682	6131096005922569	netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-patch	116f94bc9d9acdb
+560	3139	0	netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-update	ae288c098b7584c1
+3140	3254	6131096031760404	netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-configure	c41ff8ffd6169fce
+3255	3385	6131096033075631	netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-build	9639bdf05b2cfd22
+3386	3516	6131096034395831	netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-install	e083c0539ce6caac
+3516	3617	6131096035395633	netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-test	187ea3c00f21f25c
+3617	3747	6131096036705630	CMakeFiles/netxduo-populate-complete	e4479df4bb66f2c5
+3617	3747	6131096036705630	netxduo-populate-prefix/src/netxduo-populate-stamp/netxduo-populate-done	e4479df4bb66f2c5

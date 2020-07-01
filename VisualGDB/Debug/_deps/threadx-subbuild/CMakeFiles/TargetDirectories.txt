@@ -1,0 +1,3 @@
+C:/Users/t-xinden/Desktop/Examples/AzureRTOS/getting-started/Microchip/ATSAME54-XPRO/VisualGDB/Debug/_deps/threadx-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/t-xinden/Desktop/Examples/AzureRTOS/getting-started/Microchip/ATSAME54-XPRO/VisualGDB/Debug/_deps/threadx-subbuild/CMakeFiles/threadx-populate.dir
+C:/Users/t-xinden/Desktop/Examples/AzureRTOS/getting-started/Microchip/ATSAME54-XPRO/VisualGDB/Debug/_deps/threadx-subbuild/CMakeFiles/rebuild_cache.dir
