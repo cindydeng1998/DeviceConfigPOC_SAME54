@@ -1,3 +1,0 @@
-repository='https://github.com/azure-rtos/netxduo.git'
-module=''
-tag='origin'
