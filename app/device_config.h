@@ -10,17 +10,16 @@
  */
 #define SMEE_CUSTOM_SIG 0x5a5a5a5a
 
-/* The application toggles SmartEEPROM data at the following address
- * each time the device is reset. This address must be within the total
- * number of EEPROM data bytes ( Defined by SBLK and PSZ fuse values).
+/* This address must be within the total number of EEPROM data bytes 
+ * ( Defined by SBLK and PSZ fuse values).
  */
 #define SEEP_TEST_ADDR 32
 
 /* This example assumes SBLK = 1 and PSZ = 3, thus total size is 4096 bytes */
 #define SEEP_FINAL_BYTE_INDEX 4095
 
-// Address of EEPROM, spaced away from the verify signature
-#define EEPROM_ADDR		(SEEPROM_ADDR + 0x8)
+// Address of FLASH, spaced away from the verify signature
+#define FLASH_ADDRESS		(SEEPROM_ADDR + 0x8)
 
 // Max length of the data buffer read from flash
 #define MAX_READ_BUFF 380

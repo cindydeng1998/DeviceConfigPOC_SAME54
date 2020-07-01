@@ -5,7 +5,6 @@
 
 /**
  ** \brief Hardfault Handler
- 
  * Used to identify when a location outside the reserved area
  * for SmartEEPROM is accessed.
  */
@@ -19,14 +18,13 @@ void HardFault_Handler(void)
 }
 
 /**
- * \brief Verify the custom data in SmartEEPROM
+ * \brief Verify the custom data in FLASH
  *
- * Verify the custom data at initial 4 bytes of SmartEEPROM
+ * Verify the custom data at initial 4 bytes of FLASH
  */
 int8_t verify_seep_signature(void)
 {
-	/* Define a pointer to access SmartEEPROM as words (32-bits) */
-	uint32_t *SmartEEPROM32 = (uint32_t *)SEEPROM_ADDR;
+	uint32_t *ADDR = (uint32_t *)SEEPROM_ADDR;
 	
 	int8_t ret_val = ERR_INVALID_DATA;
 
@@ -38,7 +36,7 @@ int8_t verify_seep_signature(void)
 		while (1) ;
 	}
 
-	if (SMEE_CUSTOM_SIG == SmartEEPROM32[0]) {
+	if (SMEE_CUSTOM_SIG == ADDR[0]) {
 		ret_val = ERR_NONE;
 	}
 
@@ -52,7 +50,7 @@ int8_t verify_seep_signature(void)
  */
 void verify_eeprom_status(void)
 {
-	uint32_t *SmartEEPROM32 = (uint32_t *)SEEPROM_ADDR;
+	uint32_t *ADDR = (uint32_t *)SEEPROM_ADDR;
 	
 	/* Initializes MCU, drivers and middleware */
 	if (ERR_NONE == verify_seep_signature()) {
@@ -61,22 +59,21 @@ void verify_eeprom_status(void)
 	else {
 		printf("\r\nStoring signature to SmartEEPROM address 0x00 to 0x03\r\n");
 		while (hri_nvmctrl_get_SEESTAT_BUSY_bit(NVMCTRL)) ;
-		SmartEEPROM32[0] = SMEE_CUSTOM_SIG;
+		ADDR[0] = SMEE_CUSTOM_SIG;
 	}
 }
 
 /*
- * Verifies if the eeprom has been Azure IoT credentials*/
+ * Verifies if the FLASH has been Azure IoT credentials*/
 int8_t has_credentials(void)
 {
-	/* Define a pointer to access SmartEEPROM as words (32-bits) */
-	uint8_t *SmartEEPROM = (uint8_t *)EEPROM_ADDR;
+	uint8_t *FLASH_BUF = (uint8_t *)FLASH_ADDRESS;
 	
 	int8_t ret_val = ERR_INVALID_DATA;
 
-	if (SmartEEPROM[0] != EMPTY_EEPROM_VAL) 
+	if (FLASH_BUF[0] != EMPTY_EEPROM_VAL) 
 	{
-		// Proper value stored in EEPROM
+		// Proper value stored in flash
 		ret_val = ERR_NONE;
 	}
 
@@ -90,8 +87,8 @@ int8_t save_to_flash(char *hostname, char *device_id, char* primary_key)
 {
 	int8_t ret_val = 1;
 	
-	// Pointer used to access EEPROM
-	uint8_t *SmartEEPROM = (uint8_t *)EEPROM_ADDR;
+	// Pointer used to access flash
+	uint8_t *FLASH_BUF = (uint8_t *)FLASH_ADDRESS;
 	
 	const char *format = "hostname=%s device_id=%s primary_key=%s";
 	
@@ -105,30 +102,32 @@ int8_t save_to_flash(char *hostname, char *device_id, char* primary_key)
 		return ret_val;
 	}
 	
-	// Store byte by byte into EEPROM
+	// Store byte by byte into FLASH
 	for (int i = 0; i < sizeof(writeData); i++)
 	{
-		SmartEEPROM[i] = writeData[i];
+		FLASH_BUF[i] = writeData[i];
 	}
 	
 	return ret_val;
 }
 
+
 /*
- * Erase EERPOM by setting buffer to 0xFF to clear
+ * Erase flash by setting buffer to 0xFF to clear
  **/
 void erase_flash(void)
 {
-	uint8_t *SmartEEPROM = (uint8_t *)EEPROM_ADDR;
+	uint8_t *FLASH_BUF = (uint8_t *)FLASH_ADDRESS;
 	for (int i = 0; i < MAX_READ_BUFF; i++)
 	{
-		SmartEEPROM[i] = EMPTY_EEPROM_VAL;
+		FLASH_BUF[i] = EMPTY_EEPROM_VAL;
 	}
-	printf("SmartEEPROM erased\n");
+	printf("Flash erased\n");
 }
 
+
 /*
- * Read credentials from memory and write info to buffers
+ * Read credentials from FLASH memory and write info to buffers
  **/
 void read_flash(char* hostname, char* device_id, char* primary_key)
 {
@@ -139,13 +138,13 @@ void read_flash(char* hostname, char* device_id, char* primary_key)
 
 	const char *format = "hostname=%s device_id=%s primary_key=%s"; 
 	
-	// Pointer to access the EEPROM
-	uint8_t *EEPROM = (uint8_t *)EEPROM_ADDR;
+	// Pointer to access the FLASH
+	uint8_t *FLASH_BUF = (uint8_t *)FLASH_ADDRESS;
 	
 	// Read  one char at a time
 	for(int i = 0 ; i < MAX_READ_BUFF ; i++)
 	{
-		readData[i] = EEPROM[i];
+		readData[i] = FLASH_BUF[i];
 	}
 
 	// Parse credentials from string
