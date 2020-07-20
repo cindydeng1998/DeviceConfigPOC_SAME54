@@ -3,13 +3,14 @@
    
 #include "board_init.h"
 
+
 void board_init()
 {
     /* Initializes MCU, drivers and middleware */
     atmel_start_init();
     printf("Board initialized.\r\n");
-	
-	verify_eeprom_status();
+
+	verify_mem_status();
 
 	char hostname[MAX_HOSTNAME_LEN] = ""; 
 	char device_id[MAX_DEVICEID_LEN] = "";

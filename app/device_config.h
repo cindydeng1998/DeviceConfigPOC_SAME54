@@ -37,19 +37,17 @@
 #define EMPTY_EEPROM_VAL 0xFF
 
 
-/* common for all boards */
-
 /* Handler for a HardFault */
 void HardFault_Handler(void);
 
 /* Checks if memory contains Azure IoT credentials*/
 int8_t has_credentials(void);
 
-/* Checks if EEPROM is ready to use */
-void verify_eeprom_status(void);
+/* Checks if memory is ready to use */
+void verify_mem_status(void);
 
 /* Save Azure IoT credentials to flash */
-int8_t save_to_flash(char *hostname, char *device_id, char* primary_key); // name to be changed
+int8_t save_to_flash(char *hostname, char *device_id, char* primary_key);
 
 /* Erase Azure IoT credentials from flash */ 
 void erase_flash(void);

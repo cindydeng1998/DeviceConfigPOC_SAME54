@@ -48,7 +48,7 @@ int8_t verify_seep_signature(void)
  * 
  *	Verify the SmartEEPROM is setup properly 
  */
-void verify_eeprom_status(void)
+void verify_mem_status(void)
 {
 	uint32_t *ADDR = (uint32_t *)SEEPROM_ADDR;
 	
@@ -149,6 +149,7 @@ void read_flash(char* hostname, char* device_id, char* primary_key)
 
 	// Parse credentials from string
 	sscanf(readData, format, _hostname, _device_id, _primary_key);
+	
 	
 	// Store content in buffers
 	strcpy(hostname, _hostname);
