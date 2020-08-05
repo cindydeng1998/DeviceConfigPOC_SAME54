@@ -144,7 +144,7 @@ rule C_COMPILER__app_common_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files (x86)\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\t-xinden\Desktop\Examples\Azure RTOS\getting-started\Microchip\ATSAME54-XPRO" -B"C:\Users\t-xinden\Desktop\Examples\Azure RTOS\getting-started\Microchip\ATSAME54-XPRO\build"
+  command = "C:\Program Files (x86)\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\t-xinden\Desktop\Examples\AzureRTOS\getting-started\Microchip\ATSAME54-XPRO -BC:\Users\t-xinden\Desktop\Examples\AzureRTOS\getting-started\Microchip\ATSAME54-XPRO\build
   description = Re-running CMake...
   generator = 1
 

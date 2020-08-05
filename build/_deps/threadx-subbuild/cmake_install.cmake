@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/build/_deps/threadx-subbuild
+# Install script for directory: C:/Users/t-xinden/Desktop/Examples/AzureRTOS/getting-started/Microchip/ATSAME54-XPRO/build/_deps/threadx-subbuild
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/build/_deps/threadx-subbuild/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/t-xinden/Desktop/Examples/AzureRTOS/getting-started/Microchip/ATSAME54-XPRO/build/_deps/threadx-subbuild/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

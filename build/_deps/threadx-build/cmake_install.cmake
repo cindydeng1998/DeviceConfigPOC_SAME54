@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/build/_deps/threadx-build/ports/cortex_m4/gnu/cmake_install.cmake")
-  include("C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/build/_deps/threadx-build/common/cmake_install.cmake")
+  include("C:/Users/t-xinden/Desktop/Examples/AzureRTOS/getting-started/Microchip/ATSAME54-XPRO/build/_deps/threadx-build/ports/cortex_m4/gnu/cmake_install.cmake")
+  include("C:/Users/t-xinden/Desktop/Examples/AzureRTOS/getting-started/Microchip/ATSAME54-XPRO/build/_deps/threadx-build/common/cmake_install.cmake")
 
 endif()
 

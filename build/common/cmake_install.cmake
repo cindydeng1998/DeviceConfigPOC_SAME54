@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/common
+# Install script for directory: C:/Users/t-xinden/Desktop/Examples/AzureRTOS/getting-started/common
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,7 +1,37 @@
 /* Copyright (c) Microsoft Corporation.
    Licensed under the MIT License. */
 
+#include "atmel_start.h"
 #include "device_config.h"
+
+/* A specific byte pattern stored at the begining of SmartEEPROM data area.
+ * When the application comes from a reset, if it finds this signature,
+ * the assumption is that the SmartEEPROM has some valid data.
+ */
+#define SMEE_CUSTOM_SIG			0x5a5a5a5a
+
+/* This address must be within the total number of EEPROM data bytes 
+ * ( Defined by SBLK and PSZ fuse values).
+ */
+#define SEEP_TEST_ADDR			32
+
+/* This example assumes SBLK = 1 and PSZ = 3, thus total size is 4096 bytes */
+#define SEEP_FINAL_BYTE_INDEX	4095
+
+/* Address of FLASH, spaced away from the verify signature */
+#define FLASH_ADDRESS			(SEEPROM_ADDR + 0x8)
+
+
+/* Handler for a HardFault */
+void HardFault_Handler(void);
+
+/* Device specific flash access function prorotypes */
+FLASH_Status_t save_to_flash_SAME54(char *writeData);
+FLASH_Status_t read_flash_SAME54(char *readData);
+FLASH_Status_t erase_flash_SAME54(void);
+
+
+// Helper functions
 
 /**
  ** \brief Hardfault Handler
@@ -30,11 +60,14 @@ int8_t verify_seep_signature(void)
 
 	while (hri_nvmctrl_get_SEESTAT_BUSY_bit(NVMCTRL)) ;
 
-	/* If SBLK fuse is not configured, inform the user and wait here */
-	if (!(hri_nvmctrl_read_SEESTAT_SBLK_bf(NVMCTRL))) {
-		printf("\r\nPlease configure SBLK fuse to allocate SmartEEPROM area\r\n");
-		while (1) ;
-	}
+	//	/* If SBLK fuse is not configured, inform the user and wait here */
+	//	if (!(hri_nvmctrl_read_SEESTAT_SBLK_bf(NVMCTRL))) {
+	//		printf("\r\nPlease configure SBLK fuse to allocate SmartEEPROM area\r\n");
+	//		while (1) ;
+	//	}
+	
+	//NVMCTRL_SEESBLK = 0x01
+	//NVMCTRL_SEEPSZ = 0x03
 
 	if (SMEE_CUSTOM_SIG == ADDR[0]) {
 		ret_val = ERR_NONE;
@@ -43,12 +76,54 @@ int8_t verify_seep_signature(void)
 	return ret_val;
 }
 
+
+FLASH_Status_t save_to_flash_SAME54(char *writeData)
+{
+	// Pointer used to access flash
+	uint8_t *FLASH_BUF = (uint8_t *)FLASH_ADDRESS;
+	
+	// Wait until Smart EEPROM is busy
+	while(hri_nvmctrl_get_SEESTAT_BUSY_bit(NVMCTRL));
+	
+	// Store byte by byte into FLASH
+	for(int i = 0 ; i < MAX_READ_BUFF; i++)
+	{
+		FLASH_BUF[i] = writeData[i];
+	}
+	// TODO find what the failure case here is
+	
+	return STATUS_OK;
+}
+
+/* SAME54 function to read into readData buffer */
+FLASH_Status_t read_flash_SAME54(char *readData)
+{
+	FLASH_Status_t status = STATUS_OK;
+	
+	// Pointer to access the smart EEPROM
+	uint8_t *FLASH_BUF = (uint8_t *)FLASH_ADDRESS;
+	
+	// Wait until SmartEEPROM is busy
+	while(hri_nvmctrl_get_SEESTAT_BUSY_bit(NVMCTRL));
+	
+	// Read  one char at a time
+	for(int i = 0 ; i < MAX_READ_BUFF; i++)
+	{
+		readData[i] = FLASH_BUF[i];
+	}
+	
+	return status;
+}
+
+
+// Device Configuration interface functions
+
 /**
  * \brief Verify the SmartEEPROM is setup properly 
  * 
  *	Verify the SmartEEPROM is setup properly 
  */
-void verify_mem_status(void)
+bool verify_mem_status(void)
 {
 	uint32_t *ADDR = (uint32_t *)SEEPROM_ADDR;
 	
@@ -65,30 +140,28 @@ void verify_mem_status(void)
 
 /*
  * Verifies if the FLASH has been Azure IoT credentials*/
-int8_t has_credentials(void)
+bool has_credentials(void)
 {
 	uint8_t *FLASH_BUF = (uint8_t *)FLASH_ADDRESS;
 	
-	int8_t ret_val = ERR_INVALID_DATA;
+	int8_t ret_val = false;
 
 	if (FLASH_BUF[0] != EMPTY_EEPROM_VAL) 
 	{
 		// Proper value stored in flash
-		ret_val = ERR_NONE;
+		ret_val = true;
 	}
 
 	return ret_val;
 }
 
+
 /*
  * Format and store Azure IoT credentials in flash 
  **/
-int8_t save_to_flash(char *hostname, char *device_id, char* primary_key)
+FLASH_Status_t save_to_flash(char *hostname, char *device_id, char* primary_key)
 {
-	int8_t ret_val = 1;
-	
-	// Pointer used to access flash
-	uint8_t *FLASH_BUF = (uint8_t *)FLASH_ADDRESS;
+	FLASH_Status_t status = SAVE_STATUS_ERROR;
 	
 	const char *format = "hostname=%s device_id=%s primary_key=%s";
 	
@@ -97,25 +170,21 @@ int8_t save_to_flash(char *hostname, char *device_id, char* primary_key)
 	// Create credential string using format string
 	if (sprintf(writeData, format, hostname, device_id, primary_key) < 0)
 	{
-		// Error 
-		ret_val = 0;
-		return ret_val;
+		printf("Error parsing credentials to store. \n");
+		return SAVE_STATUS_ERROR;
 	}
 	
-	// Store byte by byte into FLASH
-	for (int i = 0; i < sizeof(writeData); i++)
-	{
-		FLASH_BUF[i] = writeData[i];
-	}
+	// Call device specific implementation of FLASH storage
+	status = save_to_flash_SAME54(writeData);
 	
-	return ret_val;
+	return status;
 }
 
 
 /*
  * Erase flash by setting buffer to 0xFF to clear
  **/
-void erase_flash(void)
+FLASH_Status_t erase_flash(void)
 {
 	uint8_t *FLASH_BUF = (uint8_t *)FLASH_ADDRESS;
 	for (int i = 0; i < MAX_READ_BUFF; i++)
@@ -126,34 +195,55 @@ void erase_flash(void)
 }
 
 
+
 /*
- * Read credentials from FLASH memory and write info to buffers
+ * Read credentials from flash memory and write info to buffers
  **/
-void read_flash(char* hostname, char* device_id, char* primary_key)
+// FLASH_Status_t read_flash(char* hostname, char* device_id, char* primary_key)
+// {
+// 	FLASH_Status_t status = READ_STATUS_FLASH_ERROR;
+	
+// 	char readData[MAX_READ_BUFF] = { 0 };
+// 	char _hostname[MAX_HOSTNAME_LEN] = { 0 }; 
+// 	char _device_id[MAX_DEVICEID_LEN] = { 0 };
+// 	char _primary_key[MAX_KEY_LEN] = { 0 };
+
+// 	const char *format = "hostname=%s device_id=%s primary_key=%s"; 
+	
+// 	// Call MCU specific flash reading function
+// 	status = read_flash_SAME54(readData);
+	
+// 	// Parse credentials from string
+// 	sscanf(readData, format, _hostname, _device_id, _primary_key);
+	
+// 	// Store content in buffers
+// 	strcpy(hostname, _hostname);
+// 	strcpy(device_id, _device_id);
+// 	strcpy(primary_key, _primary_key);
+	
+// 	return status;
+// }
+
+
+// what if read_flash returns a device config info struct
+
+FLASH_Status_t read_flash(DevConfig_IoT_Info_t* info)
 {
+	FLASH_Status_t status = READ_STATUS_FLASH_ERROR;
+	
 	char readData[MAX_READ_BUFF] = { 0 };
-	char _hostname[MAX_HOSTNAME_LEN] = { 0 }; 
-	char _device_id[MAX_DEVICEID_LEN] = { 0 };
-	char _primary_key[MAX_KEY_LEN] = { 0 };
 
 	const char *format = "hostname=%s device_id=%s primary_key=%s"; 
 	
-	// Pointer to access the FLASH
-	uint8_t *FLASH_BUF = (uint8_t *)FLASH_ADDRESS;
+	// Call MCU specific flash reading function
+	status = read_flash_SAME54(readData);
+	printf("%s", readData);
 	
-	// Read  one char at a time
-	for(int i = 0 ; i < MAX_READ_BUFF ; i++)
+	// Parse credentials from string
+	if(sscanf(readData, format, info->hostname, info->device_id, info->primary_key) < 0)
 	{
-		readData[i] = FLASH_BUF[i];
+		status = READ_STATUS_FLASH_ERROR;
 	}
 
-	// Parse credentials from string
-	sscanf(readData, format, _hostname, _device_id, _primary_key);
-	
-	
-	// Store content in buffers
-	strcpy(hostname, _hostname);
-	strcpy(device_id, _device_id);
-	strcpy(primary_key, _primary_key);
-	
+	return status;
 }

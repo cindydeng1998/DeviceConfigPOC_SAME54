@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/t-xinden/Desktop/Examples/Azure RTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start
+# Install script for directory: C:/Users/t-xinden/Desktop/Examples/AzureRTOS/getting-started/Microchip/ATSAME54-XPRO/lib/atmel_start
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

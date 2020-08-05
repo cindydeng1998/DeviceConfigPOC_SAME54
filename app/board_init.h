@@ -10,7 +10,6 @@
 #include "Bosch_BME280.h"
 #include "device_config.h"
 
-
 void board_init();
 
 #endif // _BOARD_INIT_H

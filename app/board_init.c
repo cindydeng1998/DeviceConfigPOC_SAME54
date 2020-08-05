@@ -3,7 +3,6 @@
    
 #include "board_init.h"
 
-
 void board_init()
 {
     /* Initializes MCU, drivers and middleware */
@@ -12,20 +11,23 @@ void board_init()
 
 	verify_mem_status();
 
-	char hostname[MAX_HOSTNAME_LEN] = ""; 
-	char device_id[MAX_DEVICEID_LEN] = "";
-	char primary_key[MAX_KEY_LEN] = "";
+	DevConfig_IoT_Info_t device_info;
 	
-	if (has_credentials() == ERR_NONE)
+	if (has_credentials())
 	{
-		read_flash(hostname, device_id, primary_key);
-		printf("\n Currently device %s is connected to %s. \n", device_id, hostname);
+		if(read_flash(&device_info) == STATUS_OK)
+		{
+			printf("\nCurrently device %s is connected to %s. \n", device_info.device_id, device_info.hostname);
+		}
+		else
+		{
+			printf("\nError reading from flash\n");
+		}
 		
 		// Start menu option
 		int menu_option;
-		
-		printf("Press 0: Continue .\r\n");
-		printf("Press 1: Erase credentials/Reset Flash .\r\n");
+		printf("Press 0: Continue .\r\nPress 1: Erase credentials/Reset Flash .\r\n");
+
 		if (scanf("%d", &menu_option) == 0)
 		{
 			/* Not valid input, flush stdin */
@@ -36,8 +38,12 @@ void board_init()
 			erase_flash();
 		}
 	}
+
+	char hostname[MAX_HOSTNAME_LEN] = ""; 
+	char device_id[MAX_DEVICEID_LEN] = "";
+	char primary_key[MAX_KEY_LEN] = "";
 	
-	while (has_credentials() != ERR_NONE) 
+	while (!has_credentials()) 
 	{
 		printf("No Azure IoT credentials stored in device. Please enter credentials into serial terminal. \n\n");
 		
@@ -68,8 +74,7 @@ void board_init()
 		printf("primary_key: %s\n\n", primary_key);
 		
 		// Logic about going back and changing if things are wrong		
-		printf("Press 0: YES, proceed \n");
-		printf("Press 1: NO, re-enter credentials \n");
+		printf("Press 0: YES, proceed \nPress 1: NO, re-enter credentials \n");
 
 		int user_selection = 0;
 		if (scanf("%d", &user_selection) == 0)
@@ -84,12 +89,11 @@ void board_init()
 			continue;
 		}
 		
-		if (save_to_flash(hostname, device_id, primary_key) == 1)
+		if (save_to_flash(hostname, device_id, primary_key) == STATUS_OK)
 		{
 			printf("Successfully saved credentials to flash. \n\n");
 		}
 	} 
-	
 	
     WeatherClick_initialize();
     printf("Temperature sensor initialized.\r\n");

@@ -23,7 +23,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files (x86)\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\t-xinden\Desktop\Examples\Azure RTOS\getting-started\Microchip\ATSAME54-XPRO\build\_deps\threadx-subbuild" -B"C:\Users\t-xinden\Desktop\Examples\Azure RTOS\getting-started\Microchip\ATSAME54-XPRO\build\_deps\threadx-subbuild"
+  command = "C:\Program Files (x86)\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\t-xinden\Desktop\Examples\AzureRTOS\getting-started\Microchip\ATSAME54-XPRO\build\_deps\threadx-subbuild -BC:\Users\t-xinden\Desktop\Examples\AzureRTOS\getting-started\Microchip\ATSAME54-XPRO\build\_deps\threadx-subbuild
   description = Re-running CMake...
   generator = 1
 

@@ -9,11 +9,8 @@
 #include "networking.h"
 #include "sntp_client.h"
 #include "azure_iothub.h"
-#include "device_config.h"
 
 //#include "azure_config.h"
-
-
 
 #define AZURE_THREAD_STACK_SIZE 4096
 #define AZURE_THREAD_PRIORITY   4
@@ -55,14 +52,15 @@ void azure_thread_entry(ULONG parameter)
         return;
     }
 	
-	// Read credentials from flash
-	char hostname[MAX_HOSTNAME_LEN] = ""; 
-    char device_id[MAX_DEVICEID_LEN] = "";
-    char primary_key[MAX_KEY_LEN] = ""; 
-	
-	read_flash(hostname, device_id, primary_key);
-	
-	if (!azure_iothub_run(hostname, device_id, primary_key))
+	DevConfig_IoT_Info_t device_info;
+
+    if (read_flash(&device_info) != STATUS_OK)
+	{
+		printf("Failed to read from flash memory\n");
+        return;
+	}
+
+	if (!azure_iothub_run(device_info.hostname, device_info.device_id, device_info.primary_key))
 	{
 		printf("Failed to start Azure IotHub\r\n");
 		return;
