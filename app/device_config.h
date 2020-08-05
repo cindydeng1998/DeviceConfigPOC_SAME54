@@ -50,8 +50,3 @@ FLASH_Status_t erase_flash(void);
 
 /* Read Azure IoT credentials from flash */
 FLASH_Status_t read_flash(DevConfig_IoT_Info_t* info);
-
-
-/* Read Azure IoT credentials from flash */
-//FLASH_Status_t read_flash(char* hostname, char* device_id, char* primary_key);
-

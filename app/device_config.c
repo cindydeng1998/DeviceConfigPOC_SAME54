@@ -28,8 +28,6 @@ void HardFault_Handler(void);
 /* Device specific flash access function prorotypes */
 FLASH_Status_t save_to_flash_SAME54(char *writeData);
 FLASH_Status_t read_flash_SAME54(char *readData);
-FLASH_Status_t erase_flash_SAME54(void);
-
 
 // Helper functions
 
@@ -76,7 +74,7 @@ int8_t verify_seep_signature(void)
 	return ret_val;
 }
 
-
+/* SAME54 function to store into FLASH */
 FLASH_Status_t save_to_flash_SAME54(char *writeData)
 {
 	// Pointer used to access flash
@@ -187,46 +185,22 @@ FLASH_Status_t save_to_flash(char *hostname, char *device_id, char* primary_key)
 FLASH_Status_t erase_flash(void)
 {
 	uint8_t *FLASH_BUF = (uint8_t *)FLASH_ADDRESS;
+
 	for (int i = 0; i < MAX_READ_BUFF; i++)
 	{
 		FLASH_BUF[i] = EMPTY_EEPROM_VAL;
 	}
+	
 	printf("Flash erased\n");
+
+	return STATUS_OK;
 }
 
 
 
 /*
- * Read credentials from flash memory and write info to buffers
+ * Read credentials from flash memory and write info to DevConfig struct
  **/
-// FLASH_Status_t read_flash(char* hostname, char* device_id, char* primary_key)
-// {
-// 	FLASH_Status_t status = READ_STATUS_FLASH_ERROR;
-	
-// 	char readData[MAX_READ_BUFF] = { 0 };
-// 	char _hostname[MAX_HOSTNAME_LEN] = { 0 }; 
-// 	char _device_id[MAX_DEVICEID_LEN] = { 0 };
-// 	char _primary_key[MAX_KEY_LEN] = { 0 };
-
-// 	const char *format = "hostname=%s device_id=%s primary_key=%s"; 
-	
-// 	// Call MCU specific flash reading function
-// 	status = read_flash_SAME54(readData);
-	
-// 	// Parse credentials from string
-// 	sscanf(readData, format, _hostname, _device_id, _primary_key);
-	
-// 	// Store content in buffers
-// 	strcpy(hostname, _hostname);
-// 	strcpy(device_id, _device_id);
-// 	strcpy(primary_key, _primary_key);
-	
-// 	return status;
-// }
-
-
-// what if read_flash returns a device config info struct
-
 FLASH_Status_t read_flash(DevConfig_IoT_Info_t* info)
 {
 	FLASH_Status_t status = READ_STATUS_FLASH_ERROR;
@@ -237,7 +211,6 @@ FLASH_Status_t read_flash(DevConfig_IoT_Info_t* info)
 	
 	// Call MCU specific flash reading function
 	status = read_flash_SAME54(readData);
-	printf("%s", readData);
 	
 	// Parse credentials from string
 	if(sscanf(readData, format, info->hostname, info->device_id, info->primary_key) < 0)
