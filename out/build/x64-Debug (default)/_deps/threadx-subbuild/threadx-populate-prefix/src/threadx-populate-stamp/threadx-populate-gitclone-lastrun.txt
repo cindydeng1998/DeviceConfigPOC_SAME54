@@ -1,3 +1,0 @@
-repository='https://github.com/azure-rtos/threadx.git'
-module=''
-tag='origin'

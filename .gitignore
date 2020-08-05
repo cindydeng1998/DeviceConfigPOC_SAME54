@@ -3,3 +3,4 @@ VisualGDB/
 .vscode/
 .azure_config.h
 .vs/
+out/
